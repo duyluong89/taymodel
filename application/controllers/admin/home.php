@@ -109,6 +109,26 @@ class home extends adminController {
 		}	
 	}
 
+	function personmanager(){
+		try{
+			$crud = new grocery_CRUD();
+
+			$crud->set_table('person');
+			$crud->set_subject('person manager');
+			$crud->required_fields('name','height','bust','waist','hips','shoe','eyes','avatar','category','status');
+			$crud->columns('name','status');
+			$crud->set_field_upload("avatar","assets/uploads/files");
+			$crud->set_field_upload("thumb","assets/uploads/files");
+			$crud->set_relation("category","category","name");
+			$output = $crud->render();
+			$output->title="person  manager";
+			$this->output($output);
+			
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}	
+	}
+
 
 
 
