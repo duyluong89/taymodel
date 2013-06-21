@@ -71,11 +71,47 @@ class home extends adminController {
 		}
 	}
 
-	function checkslugblog($slug){
+	function categorymanager(){
+		try{
+			$crud = new grocery_CRUD();
 
+			$crud->set_table('category');
+			$crud->set_subject('category');
+			$crud->required_fields('name');
+			$crud->columns('name','parent','status');
+			$crud->set_relation("parent","category","name");
+			$output = $crud->render();
+			$output->title="category manager";
+			$this->output($output);
+			
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
 	}
+
+	function configurationmanager(){
+	try{
+			$crud = new grocery_CRUD();
+
+			$crud->set_table('configuration');
+			$crud->set_subject('configuration');
+			$crud->required_fields('name');
+			$crud->columns('name','status');
+			$crud->set_field_upload("homelogo","assets/uploads/files");
+			$crud->set_field_upload("logo","assets/uploads/files");
+
+			$output = $crud->render();
+			$output->title="configuration  manager";
+			$this->output($output);
+			
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}	
+	}
+
 
 
 
 }
 
+?>

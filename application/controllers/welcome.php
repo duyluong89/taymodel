@@ -8,8 +8,13 @@ class welcome extends indexControllder {
 	}
 	public function index()
 	{
-		
-		$this->load->view('welcome_message');
+		$mslider = $this->mslider->get_where_custom("status","active");
+		$this->defaultdata['pconfig'] = $this->pconfig;
+		$this->defaultdata['js'] = $this->load->view("home/js", array(),true);
+		$this->defaultdata['home'] = "home";
+		$this->defaultdata['content'] = $this->load->view("home/slider", array("sliders"=>$mslider),true);
+
+		$this->outtemp($this->defaultdata);
 	}
 }
 

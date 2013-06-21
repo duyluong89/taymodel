@@ -32,8 +32,8 @@ a:hover
 		<a href='<?php echo site_url('admin/home/slidermanager')?>'>Slider manager</a> |
 		<a href='<?php echo site_url('admin/home/blogcategorymanager')?>'>Blog Category</a> |
 		<a href='<?php echo site_url('admin/home/blogmanager')?>'>Blog</a> |
-		<a href='<?php echo site_url('examples/offices_management')?>'>Offices</a> | 
-		<a href='<?php echo site_url('examples/employees_management')?>'>Employees</a> |		 
+		<a href='<?php echo site_url('admin/home/categorymanager')?>'>Category</a> | 
+		<a href='<?php echo site_url('admin/home/configurationmanager')?>'>Configuration</a> |		 
 		<a href='<?php echo site_url('examples/film_management')?>'>Films</a>
 	</div>
 	<div style='height:20px;'></div>  
