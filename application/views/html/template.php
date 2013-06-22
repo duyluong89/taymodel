@@ -25,9 +25,11 @@
 		</div>
 		<?php echo isset($mainmenu)?$mainmenu:""?>
 	</header>
+	<div class="clear"></div>
 	<div id="content">
 		<?php echo isset($content)?$content:""?>
 	</div>
+	<div class="clear"></div>
 	<div class="footer">
 		<div class="copyright">
 			<?php echo $pconfig->copyright;?>

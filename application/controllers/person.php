@@ -12,7 +12,7 @@ class person extends indexControllder {
 			"status"=>"active",
 			"category" => $category
 			);
-		$persons = $this->mperson->get_where_custom("status","active");
+		$persons = $this->mperson->getCustom($where);
 		$fogincontent = $this->load->view("person/listperson",array("persons"=>$persons),true);
 		$sidebar = $this->load->view("person/sidebar",array(),true);
 		$this->defaultdata["content"]=$this->load->view("person/template_person",array(

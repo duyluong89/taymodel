@@ -1,10 +1,10 @@
 <div class="list">
-	<ul>
+	<ul class="ul-person">
 		<?php foreach ($persons as $key => $p): ?>
 			<li>
 				<div class="person">
 					<h2><?php echo $p->name?></h2>
-					<img src="<?php echo $p->image?>" />
+					<a href="#"><img src="<?php echo base_url() . "assets/uploads/files/" . $p->avatar?>" /></a>
 				</div>
 			</li>
 		<?php endforeach?>
