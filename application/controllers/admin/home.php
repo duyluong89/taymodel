@@ -120,6 +120,7 @@ class home extends adminController {
 			$crud->set_field_upload("avatar","assets/uploads/files");
 			$crud->set_field_upload("thumb","assets/uploads/files");
 			$crud->set_relation("category","category","name");
+			$crud->add_action('Album', base_url() . 'public/site/images/icon-album.png', 'ui-icon-image','ui-icon-image',array($this,'createalbum'));
 			$output = $crud->render();
 			$output->title="person  manager";
 			$this->output($output);
@@ -128,6 +129,11 @@ class home extends adminController {
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
 		}	
 	}
+	function createalbum($primary_key , $row)
+{
+    return site_url('admin/home/create_album/' . $row->id);
+}
+ 
 
 
 

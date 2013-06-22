@@ -20,3 +20,17 @@ nav ul li a{text-transform: uppercase;}
 .person{position: relative;width: 150px;}
 .person h2{position: absolute;bottom: 12px;text-align: center;width: 100%; color: #fff; font-size: 16px; font-weight: normal;}
 ul.ul-person li{float: left; margin-right: 12px; margin-bottom: 4px;}
+.ul-sidebar{margin-left: 50px;margin-top: 47px;}
+ul.ul-sidebar li{line-height: 25px}
+ul.ul-sidebar li a{font-size: 14px; text-transform: uppercase;}
+.corver{float: left;width: 354px;height: 479px; background: url('../images/bg-cover.png'); text-align: center;vertical-align: middle;}
+.person-info{float: left;background: url('../images/person-info.png');width: 160px;	height: 468px; margin-left: 11px;}
+tr.space{display: block; height: 28px; width: 100%;}
+.tb-info{border: 1px solid #d2d2d2; padding: 5px; margin: 0 auto; width: 131px;}
+.tb-info td{padding: 2px;}
+.person-name h2{text-align: center; font-weight: normal;}
+.video{width: 100%;text-align: center;line-height: 31px; font-size: 14px;}
+.video span{font-size: 14px; color: red; font-weight: bold; padding-right: 4px;}
+.person-social{text-align: center; margin-left: 20px;}
+.person-social .addthis_toolbox a.addthis_button_tweet{float: left; width: 58px; overflow: hidden; margin-left: 5px}
+.person-social .addthis_toolbox a.addthis_button_facebook_like{float: left; width: 42px; overflow: hidden;}
